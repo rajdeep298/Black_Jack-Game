@@ -1,17 +1,17 @@
-var firstcard; 
-var secondcard;
-var sum=firstcard+secondcard;
-var array=[firstcard,secondcard];
-var bj=false;
-var alive=true;
+let firstcard; 
+let secondcard;
+let sum=firstcard+secondcard;
+let array=[firstcard,secondcard];
+let bj=false;
+let alive=true;
 
 document.getElementById("result").textContent="Want to play a round?🤗"
 
 document.getElementById("reset").disabled=true;
 document.getElementById("new_card").disabled=true;
 function start() {
-    firstcard==random_number(1,13);
-    secondcard==random_number(1,13);
+    firstcard=random_number(1,13);
+    secondcard=random_number(1,13);
     document.getElementById("sum").innerText="Sum:"+sum;
     //document.querySelector("#sum").innerText="Sum:"+sum; 
 
