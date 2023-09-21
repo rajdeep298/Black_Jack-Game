@@ -1,7 +1,7 @@
 let firstcard; 
 let secondcard;
-let sum=firstcard+secondcard;
-let array=[firstcard,secondcard];
+let sum=0;
+let array=0;
 let bj=false;
 let alive=true;
 
@@ -11,11 +11,15 @@ document.getElementById("reset").disabled=true;
 document.getElementById("new_card").disabled=true;
 function start() {
     firstcard=random_number(1,13);
+    // alert("First card:"+firstcard);
     secondcard=random_number(1,13);
+    // alert("Second card:"+secondcard);
+    sum=firstcard+secondcard;
     document.getElementById("sum").innerText="Sum:"+sum;
+    // alert("Sum:"+sum);
     //document.querySelector("#sum").innerText="Sum:"+sum; 
-
-    document.getElementById("cards").innerText="Cards:"+array/*firstcard+" "+secondcard*/;
+    array=[firstcard,secondcard];
+    document.getElementById("cards").innerText="Cards:"+array;/*firstcard+" "+secondcard*/;
     document.getElementById("start").remove();
     document.getElementById("new_card").disabled=false;
     check();
